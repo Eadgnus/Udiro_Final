@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'NanumSquareNeo-Variable';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    color: black;
+}
+
+/* 바디 전체 */
+body {
+    background: url(./images/UDiroBackgroundIMG.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* 컨테이너 */
+#container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* 헤더 전체 */
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color: gray;
+    opacity: 0.85;
+    line-height: 70px;
+}
+
+/* 헤더의 로고 이미지 */
+#main__logo {
+    margin: 0 auto;
+}
+
+header>div>img {
+    width: 115px;
+}
+
+/* 헤더 메뉴부분 전체 */
+#header__menu {
+    width: 90%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    font-weight: 700;
+}
+
+.header__menu__list {
+    color: white;
+}
+
+/* 헤더의 메뉴 리스트 */
+header>ul>li {
+    margin-right: 10%;
+}
+
+/* 로그인 회원가입 */
+.login__signUp {
+    width: 7%;
+    display: flex;
+    justify-content: right;
+    font-size: 12px;
+}
+
+#signUp {
+    margin-right: 30px;
+}
+
+#logout {
+    margin-right: 15px;
+}
+
+/* 헤더 끝 */
+
+/* 검색창 시작 */
+#search__bar__container {
+    position: relative;
+    width: 1100px;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#img {
+    position: absolute;
+    width: 17px;
+    top: 12px;
+    right: 260px;
+    margin: 0;
+}
+
+#search__filter {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    color: black;
+}
+
+#search__filter>option {
+    color: black;
+}
+
+#search__bar {
+    width: 600px;
+    height: 40px;
+    padding: 0 10px;
+}
+
+#search__filter,
+#search__bar {
+    border-radius: 10px;
+}
+
+#search__btn {
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    padding: 0 10px;
+}
+
+/*게시판 시작*/
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.card__name__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__name {
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+}
+
+.card__more {
+    font-weight: 600;
+}
+
+.card {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.card-body {
+    margin-bottom: 80px;
+}
+
+.card-body .top {
+    border-top: 3px solid #000;
+    border-bottom: 1px solid #999;
+    background-color: #e6e6e6;
+    font-weight: 600;
+}
+
+.card-body div {
+    border-bottom: 1px solid #999;
+}
+
+.card-body div div {
+    display: inline-block;
+    border-bottom: none;
+    text-align: center;
+    border-right: 1px solid #9991;
+}
+
+.card-body .recommand {
+    border-right: none;
+}
+
+.card-body .top .title {
+    text-align: center;
+}
+
+.card-body div .title {
+    width: 44%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.card-body div .num,
+.name,
+.date,
+.count,
+.recommand {
+    width: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* 페이지 이동 */
+
+.number {
+    margin: 10px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.number li {
+    display: inline-block;
+}
+
+.number li a {
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #999;
+    border-radius: 10%;
+    font-weight: 500;
+}
+
+.number li a {
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #999;
+}
+
+.number li a .active {
+    background-color: #e6e6e6;
+}
+
+.btn {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.btn a {
+    border: 1px solid #999;
+    padding: 5px;
+    background-color: #e6e6e6;
+    border-radius: 10%;
+}
+
+/*게시판 끝*/
+
+#side__bar {
+    width: 200px;
+    border: 1px solid black;
+    height: 800px;
+    position: sticky;
+    left: 0;
+    top: 80px;
+}
+
+#big__container {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.sidebar__bigMenu {
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+
+.sidebar__midMenu {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.sidebar__smallMenu {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#width {
+    width: 20%;
+}
+
+#centerGo {
+    width: 10%;
+}

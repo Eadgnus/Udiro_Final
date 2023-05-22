@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조회 좋아요 기능있는 메인페이지</title>
+    <link rel="icon" type="image/png" href="../public/images/udiro_logo_1.png">
+    <link rel="stylesheet" href="../../public/css/culture.css">
+    <link rel="stylesheet" href="../../public/public.css">
+    <script defer src="./culture.js"></script>
+</head>
+
+<body>
+
+    <!-- 헤더 -->
+    <header id="header" class="header">
+        <!-- 헤더 로고 -->
+        <div id="header__logo">
+            <img src="../public/images/UDiro_seoul_logo2.png" alt="" id="header__logo__img">
+        </div>
+        <!-- 헤더 로고 끝 -->
+
+
+
+        <!-- 헤더 메뉴 시작 -->
+        <ul id="header__menu">
+            <li class="header__menu__list" id="header__menu__map">지도</li>
+            <li class="header__menu__list" id="header__menu__culture">문화</li>
+        </ul>
+        <!-- 헤더 메뉴 끝 -->
+        <!-- 로그인, 회원가입 -->
+        <div id="login" class="login__signUp">로그인</div>
+        <div id="signUp" class="login__signUp">회원가입</div>
+        <!-- 로그인, 회원가입 끝 -->
+    </header>
+    <!-- 헤더 끝 -->
+
+
+    <div id="big__container">
+        <!-- 사이드 바 -->
+        <div id="side__bar">
+            <ul id="side__bar__ul">
+                <li class="side__bar__li sidebar__bigMenu">문화</li>
+                <li class="side__bar__li sidebar__midMenu">메인</li>
+                <hr>
+                <li class="side__bar__li sidebar__smallMenu">행사</li>
+                <li class="side__bar__li sidebar__smallMenu">장소</li>
+            </ul>
+        </div>
+        <!-- 사이드 바 끝 -->
+        <!-- 전체 컨테이너 시작 -->
+
+        <!-- 문화정보 - 서울의 문화를 더 알고 싶다면 시작 -->
+        <div id="container">
+
+            <div class="image-container">
+                <div class="backgroundimage">
+                    <h2 class="mainimagetext1">문화정보</h2>
+                    <p class="mainimagetext2">서울의 문화를 더 알고 싶다면</p>
+                </div>
+            </div>
+
+            <!-- 문화정보 - 서울의 문화를 더 알고 싶다면 끝 -->
+
+            <!-- 지역 / 기간 / 분야 / 검색 표 시작 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="lengthlarger">지역</td>
+                        <td colspan="4">
+                            <select name="searchregion" class="tagsize" id="local">
+                                <option value="" class="needblack"> 지역</option>
+                                <option value="" class="needblack">강남구</option>
+                                <option value="" class="needblack">강동구</option>
+                                <option value="" class="needblack">강북구</option>
+                                <option value="" class="needblack">강서구</option>
+                                <option value="" class="needblack">관악구</option>
+                                <option value="" class="needblack">광진구</option>
+                                <option value="" class="needblack">구로구</option>
+                                <option value="" class="needblack">금천구</option>
+                                <option value="" class="needblack">노원구</option>
+                                <option value="" class="needblack">도봉구</option>
+                                <option value="" class="needblack">동대문구</option>
+                                <option value="" class="needblack">동작구</option>
+                                <option value="" class="needblack">마포구</option>
+                                <option value="" class="needblack">서대문구</option>
+                                <option value="" class="needblack">서초구</option>
+                                <option value="" class="needblack">성동구</option>
+                                <option value="" class="needblack">성북구</option>
+                                <option value="" class="needblack">송파구</option>
+                                <option value="" class="needblack">양천구</option>
+                                <option value="" class="needblack">영등포구</option>
+                                <option value="" class="needblack">용산구</option>
+                                <option value="" class="needblack">은평구</option>
+                                <option value="" class="needblack">종로구</option>
+                                <option value="" class="needblack">중구</option>
+                                <option value="" class="needblack">중랑구</option>
+                            </select>
+                            <input maxlength="20" type="text" class="regionsearch">
+                            <button type="button" class="needblack" id="searchbar1">검색</button>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="lengthlarger">기간</td>
+                        <td colspan="4"><input type="date" id="datepicker01" autocomplete="off" name="startdate"
+                                value="">
+                            <span class="dash">-</span>
+                            <input type="date" id="datepicker02" autocomplete="off" name="enddate" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lengthlarger">분야</td>
+                        <td>
+                            <select name="searchgenre" class="tagsize2" id="genre">
+                                <option value="" class="needblack"> 행사</option>
+                                <option value="" class="needblack"> 공연</option>
+                                <option value="" class="needblack"> 전시</option>
+                            </select>
+                        </td>
+                        <td class="lengthlarger">검색</td>
+                        <td>
+                            <select name="searchgenre" class="tagsize2" id="search">
+                                <option value="" class="needblack"> 제목</option>
+                                <option value="" class="needblack"> 내용</option>
+                            </select>
+                            <input maxlength="10" type="text" class="genresearch">
+                            <button type="button" class="needblack" id="searchbar2">검색</button>
+                        </td>
+                        <!-- </tr>
+                    <td class="lengthlarger"> 조회</td>
+                    <td colspan="4">
+                        <input name="aaa" type="checkbox" value="view" class='viewandlike'
+                            onclick="doOpenCheck(this);">조회
+                        <input name="aaa" type="checkbox" value="like" class='viewandlike'
+                            onclick="doOpenCheck(this);">좋아요
+                        <br />
+                    </td>
+
+                    </tr> -->
+                </tbody>
+            </table>
+            <!-- 지역 / 기간 / 분야 / 검색 표 끝 -->
+
+            <!-- 공연, 행사, 축제 시작 -->
+            <div class="performancehead">
+                <div class="event_festival">
+                    행사
+                </div>
+                <div class="festival__container">
+                    <div class="festival_image">
+                        <img
+                            src="https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53a15d7fe0395f8c12383db80cbddb43e6&streFileNm=c8bf7a3ed80676f19959d525c97b39ffad9dfc36288f971a5bacb5e178aa54a2&thumb=Y">
+                        <div class="txt">
+                            <h2>서울2023 IDO 코리아 탭댄스페스티벌</h2>
+                            <div class="date">
+                                <span>2023-04-30</span> ~ <span>2023-04-30</span>
+                            </div>
+                            <div class="viewlike">
+                                <span>👀1</span>
+                                <span>❤1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="festival_image">
+                        <img
+                            src="https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53a15d7fe0395f8c12383db80cbddb43e6&streFileNm=c8bf7a3ed80676f19959d525c97b39ffad9dfc36288f971a5bacb5e178aa54a2&thumb=Y">
+                        <div class="txt">
+                            <h2>2023 D.FESTA 거리공연축제</h2>
+                            <div class="date">
+                                <span>2023-05-26</span> ~ <span>2023-05-28</span>
+                            </div>
+                            <div class="viewlike">
+                                <span>👀1</span>
+                                <span>❤1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="festival_image">
+                        <img
+                            src="https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53a15d7fe0395f8c12383db80cbddb43e6&streFileNm=c8bf7a3ed80676f19959d525c97b39ffad9dfc36288f971a5bacb5e178aa54a2&thumb=Y">
+                        <div class="txt">
+                            <h2>2023 제25회 서울드럼페스티벌</h2>
+                            <div class="date">
+                                <span>2023-05-26</span> ~ <span>2023-05-28</span>
+                            </div>
+                            <div class="viewlike">
+                                <span>👀1</span>
+                                <span>❤1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="festival_image">
+                        <img
+                            src="https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53a15d7fe0395f8c12383db80cbddb43e6&streFileNm=c8bf7a3ed80676f19959d525c97b39ffad9dfc36288f971a5bacb5e178aa54a2&thumb=Y">
+                        <div class="txt">
+                            <h2>2023 제25회 서울드럼페스티벌</h2>
+                            <div class="date">
+                                <span>2023-05-26</span> ~ <span>2023-05-28</span>
+                            </div>
+                            <div class="viewlike">
+                                <span>👀1</span>
+                                <span>❤1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="festival_image">
+                        <img src="./festa.PNG">
+                        <div class="txt">
+                            <h2>2023 제25회 서울드럼페스티벌</h2>
+                            <div class="date">
+                                <span>2023-05-26</span> ~ <span>2023-05-28</span>
+                            </div>
+                            <div class="viewlike">
+                                <span>👀1</span>
+                                <span>❤1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival__container">
+                    <div class="festival_image">
+                        <img
+                            src="https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53a15d7fe0395f8c12383db80cbddb43e6&streFileNm=c8bf7a3ed80676f19959d525c97b39ffad9dfc36288f971a5bacb5e178aa54a2&thumb=Y">
+                        <div class="txt">
+                            <h2>서울2023 IDO 코리아 탭댄스페스티벌</h2>
+                            <div class="date">
+                                <span>2023-04-30</span> ~ <span>2023-04-30</span>
+                            </div>
+                            <div class="viewlike">
+                                <span>👀1</span>
+                                <span>❤1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="festival_image">
+                        <img
+                            src="https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53a15d7fe0395f8c12383db80cbddb43e6&streFileNm=c8bf7a3ed80676f19959d525c97b39ffad9dfc36288f971a5bacb5e178aa54a2&thumb=Y">
+                        <div class="txt">
+                            <h2>2023 D.FESTA 거리공연축제</h2>
+                            <div class="date">
+                                <span>2023-05-26</span> ~ <span>2023-05-28</span>
+                            </div>
+                            <div class="viewlike">
+                                <span>👀1</span>
+                                <span>❤1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="festival_image">
+                        <img
+                            src="https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53a15d7fe0395f8c12383db80cbddb43e6&streFileNm=c8bf7a3ed80676f19959d525c97b39ffad9dfc36288f971a5bacb5e178aa54a2&thumb=Y">
+                        <div class="txt">
+                            <h2>2023 제25회 서울드럼페스티벌</h2>
+                            <div class="date">
+                                <span>2023-05-26</span> ~ <span>2023-05-28</span>
+                            </div>
+                            <div class="viewlike">
+                                <span>👀1</span>
+                                <span>❤1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="festival_image">
+                        <img
+                            src="https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53a15d7fe0395f8c12383db80cbddb43e6&streFileNm=c8bf7a3ed80676f19959d525c97b39ffad9dfc36288f971a5bacb5e178aa54a2&thumb=Y">
+                        <div class="txt">
+                            <h2>2023 제25회 서울드럼페스티벌</h2>
+                            <div class="date">
+                                <span>2023-05-26</span> ~ <span>2023-05-28</span>
+                            </div>
+                            <div class="viewlike">
+                                <span>👀1</span>
+                                <span>❤1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="festival_image">
+                        <img src="./festa.PNG">
+                        <div class="txt">
+                            <h2>2023 제25회 서울드럼페스티벌</h2>
+                            <div class="date">
+                                <span>2023-05-26</span> ~ <span>2023-05-28</span>
+                            </div>
+                            <div class="viewlike">
+                                <span>👀1</span>
+                                <span>❤1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- 공연, 행사, 축제 끝-->
+
+            <!-- 페이지 이동 시작-->
+            <ul class="number">
+                <li id="ejun">&lt;</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li id="daum">&gt;</li>
+            </ul>
+            <!-- 페이지 이동 끝-->
+
+
+            <!-- 서울문화포털에서 쓴 예시임
+                          <ul class="pagination pagination-centered">
+                            <li class="i first disabled"><a title="처음 목록" href="javascript:changeUserPagingJSON(1);"><span class="s"><span>처음 <span class="t">목록</span></span></span></a></li>
+                            <li class="i prev disabled"><a title="이전 목록" href="javascript:changeUserPagingJSON(7)"><span class="s"><span>이전 <span class="t">목록</span></span></span></a></li>      
+                                         <li><a href="javascript:changeUserPagingJSON(1)"><span>1</span></a></li>
+                                         <li><a href="javascript:changeUserPagingJSON(2)"><span>2</span></a></li>
+                                         <li><a href="javascript:changeUserPagingJSON(3)"><span>3</span></a></li>
+                                         <li><a href="javascript:changeUserPagingJSON(4)"><span>4</span></a></li>
+                                         <li><a href="javascript:changeUserPagingJSON(5)"><span>5</span></a></li>
+                                         <li><a href="javascript:changeUserPagingJSON(6)"><span>6</span></a></li>
+                                         <li><a href="javascript:changeUserPagingJSON(7)"><span>7</span></a></li>
+                                         <li class="active"><span><em title="현재목록"><span>8</span></em></span></li>
+                                         <li><a href="javascript:changeUserPagingJSON(9)"><span>9</span></a></li>                               
+                                         <li><a href="javascript:changeUserPagingJSON(10)"><span>10</span></a></li>
+                            <li class="i next"><a title="다음 목록" href="javascript:changeUserPagingJSON(9)"><span class="s"><span>다음 <span class="t">목록</span></span></span></a></li>
+                            <li class="i end"><a title="마지막 목록" href="javascript:changeUserPagingJSON(135)"><span class="s"><span>끝 <span class="t">목록</span></span></span></a></li>
+                        </ul> -->
+
+            <!-- 1부터 10까지, 맨앞, 맨뒤, 앞, 뒤 끝-->
+        </div>
+        <!-- 전체 컨테이너 끝 -->
+        <div id="centerGo"></div>
+    </div>
+    <script src="../public/js/location/header2.js"></script>
+</body>
+
+</html>

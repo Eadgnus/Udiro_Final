@@ -1,0 +1,29 @@
+<!-- 4d66634f6a776c7436315456716566
+http://openapi.seoul.go.kr:8088/(인증키)/xml/IotVdata018/1/5/
+
+http://openapi.seoul.go.kr:8088/4d66634f6a776c7436315456716566/xml/citydata/1/5/광화문·덕수궁 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Kakao 지도 시작하기</title>
+</head>
+
+<body>
+    <div id="map" style="width:90%; height:80%;"></div>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	440d4850306225a19c1ade5724a9c73d"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
+    </script>
+</body>
+
+</html>

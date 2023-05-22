@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/place/autocomplete/output?parameters"></script> -->
+    <link rel="stylesheet" href="../public/css/map.css">
+    <link rel="stylesheet" href="../public/public.css">
+    <link rel="stylesheet" href="./modal.css">
+
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div id="header__logo">
+            <img src="../public/images/UDiro_seoul_logo2.png" alt="" id="header__logo__img">
+        </div>
+
+
+        <ul id="header__menu">
+            <li class="header__menu__list" id="header__menu__map">지도</li>
+            <li class="header__menu__list" id="header__menu__culture">문화</li>
+        </ul>
+
+        <div id="login" class="login__signUp">로그인</div>
+        <div id="signUp" class="login__signUp">회원가입</div>
+
+    </header>
+    <div id="map"></div>
+    <div id="image-buttons">
+
+        <button id="search-button">
+            <img src="../public/images/ddodbogi.png" alt="Image">
+        </button>
+        <!-- <div id="search-bar">
+            <input type="text" placeholder="검색어를 입력하세요">
+        </div> -->
+
+        
+        <select id="search-bar">
+            <option value="namSan">남산공원</option>
+            <option value="gangnamMICE">강남 MICE 관광특구</option>
+            <option value="dongdaemun">동대문 관광특구</option>
+            <option value="myeongDong">명동 관광특구</option>
+            <option value="itaewon">이태원 관광특구</option>
+            <option value="jamsil">잠실 관광특구</option>
+            <option value="jongnoCheonggye">종로·청계 관광특구</option>
+            <option value="hongdae">홍대 관광특구</option>
+            <option value="gyeongbokgungSeochon">경복궁·서촌마을</option>
+            <option value="gwanghwamunDeoksugung">광화문·덕수궁</option>
+            <option value="changdeokgungJongmyo">창덕궁·종묘</option>
+            <option value="gasanDigital">가산디지털단지역</option>
+            <option value="gangnam">강남역</option>
+            <option value="konkukUniv">건대입구역</option>
+            <option value="expressBusTerm">고속터미널역</option>
+            <option value="gyodae">교대역</option>
+            <option value="guroDigital">구로디지털단지역</option>
+            <option value="seoul">서울역</option>
+            <option value="seolleung">선릉역</option>
+            <option value="sindorim">신도림역</option>
+            <option value="sinrim">신림역</option>
+            <option value="sinchonEwha">신촌·이대역</option>
+            <option value="yeoksam">역삼역</option>
+            <option value="yeonsinnae">연신내역</option>
+            <option value="yongsan">용산역</option>
+            <option value="wangsimni">왕십리역</option>
+            <option value="DMC">DMC(디지털미디어시티)</option>
+            <option value="changdongEco">창동 신경제 중심지</option>
+            <option value="noryangjin">노량진</option>
+            <option value="naksanIhwa">낙산공원·이화마을</option>
+            <option value="bukchonHanok">북촌한옥마을</option>
+            <option value="garosu-gil">가로수길</option>
+            <option value="seongsuCafe">성수카페거리</option>
+            <option value="suyuEating">수유리 먹자골목</option>
+            <option value="ssangmunEating">쌍문동 맛집거리</option>
+            <option value="apgujeongRodeo">압구정로데오거리</option>
+            <option value="yeouido">여의도</option>
+            <option value="yeongdeungpoTimesSquare">영등포 타임스퀘어</option>
+            <option value="insadongIksundong">인사동·익선동</option>
+            <option value="nationalMuseumYongsan">국립중앙박물관·용산가족공원</option>
+            <option value="tukseomHangang">뚝섬한강공원</option>
+            <option value="mangwonHangang">망원한강공원</option>
+            <option value="banpoHangang">반포한강공원</option>
+            <option value="bukseoulDreamForest">북서울꿈의숲</option>
+            <option value="seoulGrandPark">서울대공원</option>
+            <option value="seoulForestPark">서울숲공원</option>
+            <option value="worldCupPark">월드컵공원</option>
+            <option value="ichonHangang">이촌한강공원</option>
+            <option value="jamsilSportsComplex">잠실종합운동장</option>
+            <option value="jamsilHangang">잠실한강공원</option>
+        </select>
+
+
+        <button id="refresh-button">
+            <img src="../public/images/reload.png" alt="Image">
+        </button>
+        <button class="see-button btn-open-popup"">
+            <img src=" ../public/images/eye.png" alt="Image">
+        </button>
+
+
+        <div class="seecheckbox-container">
+            <div class="seecheckbox">
+                <img src="./img/map/heart.png">
+                <input type="checkbox" id="heartCheckbox" onchange="toggleMarkerVisibility('heart')">
+            </div>
+            <div class="seecheckbox">
+                <img src="./img/map/restroom.png">
+                <input type="checkbox" id="restroomCheckbox" onchange="toggleMarkerVisibility('restroom')">
+            </div>
+            <div class="seecheckbox">
+                <img src="./img/map/parking.png">
+                <input type="checkbox" id="parkingCheckbox" onchange="toggleMarkerVisibility('parking')">
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    <!-- 날씨, 인구혼잡도, 교통 모달창 (see버튼 클릭시 보여줄것) -->
+    <div class="modal">
+
+        <div class="modal_small" id="weather">
+            <p>날씨</p>
+            <div id="weather_box">
+                <img src="../public/images/rain.png" id="weather_now">
+                <div class="description_now"> 15º
+                </div>
+            </div>
+            <div class="small">
+                <button class="see__more weather_click" id="weather_click">자세히 보기</button>
+            </div>
+        </div>
+
+        <div class="modal_small" id="road">
+            <p>도로소통 단계</p>
+            <div class="description_now">정체</div>
+            <div class="small">
+                <button class="see__more" id="road_click">자세히 보기</button>
+            </div>
+        </div>
+
+        <div class="modal_small" id="person">
+            <p>인구 혼잡도</p>
+            <div class="description_now">혼잡</div>
+            <div class="small">
+                <button class="see__more" id="person_click">자세히 보기</button>
+            </div>
+        </div>
+        <!-- <div class="close"></div> -->
+
+
+
+        <!-- 자세히 보기 클릭시 -->
+        <div class="modal2">
+            <div class="close"></div>
+            <div class="modal_More">
+                <p>날씨</p>
+
+                <div id="weather_box_big">
+                    <img src="../public/images/rain.png" id="weather_big">
+                    <div class="description_now"> 15º</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal3">
+            <div class="close"></div>
+
+            <div class="modal_More">
+                <p>인구 혼잡도</p>
+
+                <div id="weather_box_big">
+                    <img src="../public/images/rain.png" id="weather_big">
+                    <div class="description_now"> 15º</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal4">
+            <div class="close"></div>
+
+            <div class="modal_More">
+                <p>도로상황</p>
+
+                <div id="weather_box_big">
+                    <img src="../public/images/rain.png" id="weather_big">
+                    <div class="description_now"> 15º</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 날씨, 인구혼잡도, 교통 모달창 (see버튼 클릭시 보여줄것 끝) -->
+
+
+    <script src="../public/js/location/header.js" defer></script>
+
+    <script src="./modal.js" defer></script>
+    <script src="../public/js/map.js" defer></script>
+    <script src="../public/js/location/map.js" defer></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOmftdmDviuSfAficmyQnaMcZE6NmVfQM&callback=initMap&v=weekly"
+        defer></script>
+
+
+</body>
+
+</html>

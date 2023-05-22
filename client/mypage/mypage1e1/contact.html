@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+    <meta name="auther" content="borad">
+    <meta name="description" content="xoos dev">
+    <link rel="icon" type="image/png" href="../public/images/udiro_logo_1.png">
+    <link rel="stylesheet" href="../../public/css/contact.css">
+    <link rel="stylesheet" href="../../public/public.css">
+    <script src="../../public/js/freeBoard.js" defer></script>
+    <script src="https://kit.fontawesome.com/133260cff9.js"></script>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header id="header" class="header">
+        <!-- 헤더 로고 -->
+        <div id="header__logo">
+            <img src="../../public/images/UDiro_seoul_logo2.png" alt="" id="header__logo__img">
+        </div>
+        <!-- 헤더 로고 끝 -->
+
+
+
+        <!-- 헤더 메뉴 시작 -->
+        <ul id="header__menu">
+            <li class="header__menu__list" id="header__menu__map">지도</li>
+            <li class="header__menu__list" id="header__menu__culture">문화</li>
+        </ul>
+        <!-- 헤더 메뉴 끝 -->
+        <!-- 로그인, 회원가입 -->
+        <div id="login" class="login__signUp">로그인</div>
+        <div id="signUp" class="login__signUp">회원가입</div>
+        <!-- 로그인, 회원가입 끝 -->
+    </header>
+    <!-- 헤더 끝 -->
+
+    <div id="big__container">
+        <!-- 사이드 바 -->
+        <div id="side__bar">
+            <ul id="side__bar__ul">
+                <li class="side__bar__li sidebar__bigMenu" id="sb__my__page">마이페이지</li>
+                <li class="side__bar__li sidebar__midMenu" id="sb__my__post">내 문의글</li>
+                <hr>
+                <li class="side__bar__li sidebar__smallMenu" id="sb__my__account">내 정보 수정</li>
+                <li class="side__bar__li sidebar__smallMenu" id="sb__my__post2">내 문의글</li>
+            </ul>
+        </div>
+        <!-- 사이드 바 끝 -->
+        <!-- 전체 컨테이너 시작 -->
+        <div id="container">
+
+            <!-- 전체 컨테이너 끝 -->
+            <!-- 메인 검색창 부분 -->
+            <!-- 카테고리 선택 -->
+            <!-- <div id="search__bar__container">
+            -->
+            <!-- <div id="logoBox">
+
+                <img src="../../public/images/UDiro_seoul_logo1.png" id="center__logo">
+        </div> -->
+            <img src="../../public/images/UDiro_seoul_logo1.png" id="center__logo__1">
+            <!-- <div id="search__bar__mContainer">
+
+                    <select name="search__category" id="search__filter">
+                        <option value="제목">제목</option>
+                        <option value="내용">내용</option>
+                        <option value="작성자">작성자</option>
+                    </select>  -->
+
+            <!-- 카테고리 선택  끝-->
+
+
+            <!-- <div id="search__box"> -->
+            <!-- 검색창 부분 -->
+            <!-- <input type="text" id="search__bar" placeholder="검색어를 입력하세요"> -->
+            <!-- 검색창 부분 끝 -->
+            <!-- <img id="img" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+                    </div> -->
+            <!-- 검색 버튼 시작 -->
+            <!-- <button id="search__btn">검색</button> -->
+            <!-- 검색 버튼 끝 -->
+            <!-- </div> -->
+            <!-- </div> -->
+
+            <!--게시판 시작 -->
+            <div class="card">
+                <!--인기글 게시판 시작 -->
+                <div class="card-body">
+                    <div class="card__name__container">
+                        <p><i class="fa-solid fa-code"></i><span class="card__name">내 문의글</span></p>
+                    </div>
+                    <div class="top">
+                        <div class="num">번호</div>
+                        <div class="title">제목</div>
+                        <div class="name">작성자</div>
+                        <div class="date">작성일</div>
+                    </div>
+                    <div>
+                        <div class="num">10</div>
+                        <div class="title">문의드립니다</div>
+                        <div class="name">테스트</div>
+                        <div class="date">04-30</div>
+                    </div>
+                    <div>
+                        <div class="num">9</div>
+                        <div class="title">문의드립니다</div>
+                        <div class="name">테스트</div>
+                        <div class="date">04-30</div>
+                    </div>
+                    <div>
+                        <div class="num">8</div>
+                        <div class="title">문의드립니다</div>
+                        <div class="name">테스트</div>
+                        <div class="date">04-30</div>
+                    </div>
+                    <div>
+                        <div class="num">7</div>
+                        <div class="title">문의드립니다</div>
+                        <div class="name">테스트</div>
+                        <div class="date">04-30</div>
+                    </div>
+                    <div>
+                        <div class="num">6</div>
+                        <div class="title">문의드립니다</div>
+                        <div class="name">테스트</div>
+                        <div class="date">04-30</div>
+                    </div>
+                    <div>
+                        <div class="num">5</div>
+                        <div class="title">문의드립니다</div>
+                        <div class="name">테스트</div>
+                        <div class="date">04-30</div>
+                    </div>
+                    <div>
+                        <div class="num">4</div>
+                        <div class="title">글의 제목이 들어갑니다</div>
+                        <div class="name">테스트</div>
+                        <div class="date">04-26</div>
+                    </div>
+                    <div>
+                        <div class="num">3</div>
+                        <div class="title">첫번째 게시물</div>
+                        <div class="name">테스트</div>
+                        <div class="date">04-27</div>
+                    </div>
+                    <div>
+                        <div class="num">2</div>
+                        <div class="title">글의 제목이 들어갑니다</div>
+                        <div class="name">테스트</div>
+                        <div class="date">04-26</div>
+                    </div>
+                    <div>
+                        <div class="num">1</div>
+                        <div class="title">첫번째 게시물</div>
+                        <div class="name">테스트</div>
+                        <div class="date">04-27</div>
+                    </div>
+                </div>
+                <!--인기글 게시판 끝 -->
+
+                <!-- 페이지 이동 시작-->
+                <ul class="number">
+                    <li id="ejun">&lt;</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li id="daum">&gt;</li>
+                </ul>
+                <!-- 페이지 이동 끝-->
+                <!-- 글쓰기 버튼 만들기 시작-->
+                <div id="right_go">
+                    <div></div>
+                    <div class="btn" id="write">
+                        글쓰기
+                    </div>
+                </div>
+            </div>
+            <!--게시판 끝 -->
+        </div>
+        <div id="centerGo"></div>
+    </div>
+    <script src="../../public/js/location/contact.js"></script>
+</body>
+
+</html>
