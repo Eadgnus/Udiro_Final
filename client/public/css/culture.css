@@ -237,7 +237,11 @@ div>div>img {
 }
 
 /* 공연 카테고리 끝, 추가적인 행사/장소 css */
-.event_festival {
+.event_festival,
+.event_place {
+    position: relative;
+    display: flex;
+    justify-content: center;
     background-color: #0080C4;
     text-align: center;
     margin: 15px 0 0 0;
@@ -245,6 +249,17 @@ div>div>img {
     line-height: 45px;
     font-size: 20px;
     color: white;
+}
+
+.event_festival div,
+.event_place div {
+    color: white;
+}
+
+.showMore {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
 }
 
 .festival__container {
@@ -569,3 +584,7 @@ li {
 .loca-section common-section {
     margin-top: 20px;
 } */
+
+.noSee {
+    display: none !important;
+}

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>조회 좋아요 기능있는 메인페이지</title>
     <link rel="icon" type="image/png" href="../public/images/udiro_logo_1.png">
-    <link rel="stylesheet" href="../../public/css/culture.css">
-    <link rel="stylesheet" href="../../public/public.css">
+    <link rel="stylesheet" href="../public/css/culture.css">
+    <link rel="stylesheet" href="../public/public.css">
     <script defer src="./culture.js"></script>
 </head>
 
@@ -145,9 +145,10 @@
             <!-- 지역 / 기간 / 분야 / 검색 표 끝 -->
 
             <!-- 공연, 행사, 축제 시작 -->
-            <div class="performancehead">
+            <div class="performancehead" id="culture_festa">
                 <div class="event_festival">
-                    행사
+                    <div>행사</div>
+                    <div class="showMore" id="festa_more">더보기</div>
                 </div>
                 <div class="festival__container">
                     <div class="festival_image">
@@ -207,7 +208,8 @@
                         </div>
                     </div>
                     <div class="festival_image">
-                        <img src="./festa.PNG">
+                        <img
+                            src="https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53a15d7fe0395f8c12383db80cbddb43e6&streFileNm=c8bf7a3ed80676f19959d525c97b39ffad9dfc36288f971a5bacb5e178aa54a2&thumb=Y">
                         <div class="txt">
                             <h2>2023 제25회 서울드럼페스티벌</h2>
                             <div class="date">
@@ -222,9 +224,12 @@
                 </div>
             </div>
 
-            <div class="performancehead">
+            <!-- 장소 시작 -->
+            <div class="performancehead" id="culture_place">
                 <div class="event_place">
-                    장소
+                    <div>장소</div>
+                    <div class="showMore" id="place_more">더보기</div>
+
                 </div>
                 <div class="place__container">
                     <div class="place_image">
@@ -284,7 +289,8 @@
                         </div>
                     </div>
                     <div class="place_image">
-                        <img src="./festa.PNG">
+                        <img
+                            src="https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53a15d7fe0395f8c12383db80cbddb43e6&streFileNm=c8bf7a3ed80676f19959d525c97b39ffad9dfc36288f971a5bacb5e178aa54a2&thumb=Y">
                         <div class="txt">
                             <h2>2023 제25회 서울드럼페스티벌</h2>
                             <div class="date">
@@ -301,14 +307,14 @@
             <!-- 공연, 행사, 축제 끝-->
 
             <!-- 페이지 이동 시작-->
-            <ul class="number">
+            <!-- <ul class="number">
                 <li id="ejun">&lt;</li>
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
                 <li>4</li>
                 <li id="daum">&gt;</li>
-            </ul>
+            </ul> -->
             <!-- 페이지 이동 끝-->
 
             <!-- 서울문화포털에서 쓴 예시임

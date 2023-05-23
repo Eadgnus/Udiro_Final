@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import * as placeRepository from "../data/places/place.js";
 import { config } from "../config.js";
+// import db from '../db/database.js'
 
 export async function getAll(req, res, next) {
     const result = await placeRepository.getAll()
@@ -35,8 +36,16 @@ export async function noLoginme(req, res, next) {
     res.status(200).json({ token: token, user_id: user.user_id });
 }
 
+// export async function search(req, res, next) {
+//     const category = req.body.category
+//     const keyword = req.body.keyword
+
+//     category
+// }
+
 
 
 function createJwtToken(idx) {
     return jwt.sign({ idx }, config.jwt.secretKey, { expiresIn: config.jwt.expiresInSec });
-} 
+}
+

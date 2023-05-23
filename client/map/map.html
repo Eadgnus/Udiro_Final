@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="../public/css/map.css">
     <link rel="stylesheet" href="../public/public.css">
     <link rel="stylesheet" href="./modal.css">
+    <script type="module" src="../src/controller/map_modal.js"></script>
+    <script type="module">
+        import module from "http://127.0.0.1:5500/map_modal.js";
+    </script>
 
 </head>
 
@@ -31,7 +35,7 @@
         <div id="signUp" class="login__signUp">회원가입</div>
 
     </header>
-    <div id="map"></div>
+    <div id="map" style="width:100%; height: 800px;"></div>
     <div id="image-buttons">
 
         <button id="search-button">
@@ -41,7 +45,7 @@
             <input type="text" placeholder="검색어를 입력하세요">
         </div> -->
 
-        
+
         <select id="search-bar">
             <option value="namSan">남산공원</option>
             <option value="gangnamMICE">강남 MICE 관광특구</option>
@@ -135,7 +139,7 @@
             <p>날씨</p>
             <div id="weather_box">
                 <img src="../public/images/rain.png" id="weather_now">
-                <div class="description_now"> 15º
+                <div class="description_now" id="weather_desc"> 15º
                 </div>
             </div>
             <div class="small">
@@ -215,9 +219,24 @@
     <script src="./modal.js" defer></script>
     <script src="../public/js/map.js" defer></script>
     <script src="../public/js/location/map.js" defer></script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOmftdmDviuSfAficmyQnaMcZE6NmVfQM&callback=initMap&v=weekly"
-        defer></script>
+
+
+
+
+    <!-- 지도 -->
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=440d4850306225a19c1ade5724a9c73d&libraries=services"></script>
+    <script defer>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption); 
+    </script>
+
 
 
 </body>

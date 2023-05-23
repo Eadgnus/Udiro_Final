@@ -1,3 +1,49 @@
+// 더보기 버튼 클릭시 다른거 안보이게 하기
+const culture_festa = document.querySelector('#culture_festa')
+const culture_place = document.querySelector('#culture_place')
+
+// 게시글 부분
+const festival__container = document.querySelector('.festival__container')
+const place__container = document.querySelector('.place__container')
+
+const festa_more = document.querySelector('#festa_more')
+const place_more = document.querySelector('#place_more')
+
+// 행사 더보기 눌렀을때 실행할것 여기다가 db불러오기 짜면됨
+festa_more.addEventListener('click', () => {
+    culture_place.style.display = 'none';
+    festival__container.style.display = 'none';
+
+
+
+
+
+
+
+
+})
+
+// 장소 더보기 눌렀을때임
+place_more.addEventListener('click', () => {
+    culture_festa.style.display = 'none';
+    place__container.style.display = 'none';
+
+
+
+
+
+
+
+
+})
+
+
+
+
+
+
+
+
 function doOpenCheck(chk) {
     var obj = document.getElementsByName("aaa");
     for (var i = 0; i < obj.length; i++) {

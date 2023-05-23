@@ -52,7 +52,7 @@ searchForm.addEventListener('submit', function (event) {
     const keyword = document.querySelector('#search__bar').value;
 
     // 검색 요청 보내기
-    fetch('https:www.naver.com', {
+    fetch('http://localhost:8080/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
