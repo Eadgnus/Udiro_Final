@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find ID</title>
     <link rel="stylesheet" href="../public/css/findPw.css">
+    <script src="./js/findPw.js"></script>
 </head>
 
 <body>
@@ -24,20 +25,16 @@
         <br>
         <div id="content">
             <span>아이디　</span>
-            <input type="text" placeholder="아이디를 입력하세요" maxlength="20" id="idinput">
-        </div>
-        <div id="content">
-            <span>이름　　</span>
-            <input type="text" placeholder="이름을 입력하세요" maxlength="20" id="idinput">
+            <input type="text" placeholder="아이디를 입력하세요" maxlength="20" id="user_id">
         </div>
         <div id="content">
             <span>휴대전화</span>
-            <input type="text" placeholder="휴대전화 번호를 입력하세요" maxlength="20" id="idinput">
-            <button>인증번호 받기</button>
+            <input type="text" placeholder="휴대전화 번호를 입력하세요" maxlength="20" id="user_phone">
+            <button onclick="validation()">인증번호 받기</button>
         </div>
         <div id="content">
             <span>인증번호</span>
-            <input type="text" placeholder="인증번호를 입력하세요" maxlength="20" id="idinput">
+            <input type="text" placeholder="인증번호를 입력하세요" maxlength="20" id="authentication" readonly>
             <button id="findPwRe">비밀번호 찾기</button>
         </div>
 
