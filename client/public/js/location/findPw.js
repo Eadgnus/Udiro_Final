@@ -12,17 +12,3 @@ const findPwRe = document.querySelector('#findPwRe');
 logoContainer.addEventListener('click', () => {
     window.location.href = '../../main/index.html';
 })
-
-// 비번찾기
-findId.addEventListener('click', () => {
-    window.location.href = './findId.html';
-})
-
-// 회원가입
-signUp.addEventListener('click', () => {
-    window.location.href = './terms.html';
-})
-findPwRe.addEventListener('click', () => {
-    window.location.href = './newPW.html';
-})
-
