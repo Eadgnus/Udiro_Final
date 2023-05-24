@@ -1,4 +1,34 @@
 1. 지도 innerHtml로 모달창에 집어넣는거
+    - 작은모달 완료 큰모달 ㄱㄱ
+    
+    날씨
+    MAX_TEMP 최고온도
+    MIN_TEMP 최저온도
+    HUMIDITY 습도
+    PRECIPITATION 강수량
+    RAIN_CHANCE 강수확률
+    PCP_MSG 강수관련 메세지
+    
+    
+    인구혼잡도 부분
+    AREA_CONGEST_LVL 장소 혼잡도지표
+    
+    AREA_CONGEST_MSG 장소 메세지
+    
+    AREA_PPLTN_MAX 인구 지표 최대값
+    NON_RESNT_PPLTN_RATE 유동인구 비율
+    
+    
+    도로
+    ROAD_TRAFFIC_STTS 도로 상황
+    ROAD_MSG 전체 도로 메세지
+    ROAD_TRAFFIC_SPD 전체도로 평균 속도
+    
+    - css정리해서 on off가능하게
+    
+    
+    
+    
 2. 지도 fetch쓸일 있으면 연결
 3. 지도 찜기능
 
@@ -6,3 +36,5 @@
 css정리 
 개별페이지 뿌리기 완료
 data뿌릴때 onclick 
+
+http://openapi.seoul.go.kr:8088/4d66634f6a776c7436315456716566/xml/citydata/1/5/광화문·덕수궁

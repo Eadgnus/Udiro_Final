@@ -12,10 +12,7 @@
     <link rel="stylesheet" href="../public/css/map.css">
     <link rel="stylesheet" href="../public/public.css">
     <link rel="stylesheet" href="./modal.css">
-    <script type="module" src="../src/controller/map_modal.js"></script>
-    <script type="module">
-        import module from "http://127.0.0.1:5500/map_modal.js";
-    </script>
+
 
 </head>
 
@@ -35,7 +32,7 @@
         <div id="signUp" class="login__signUp">회원가입</div>
 
     </header>
-    <div id="map" style="width:100%; height: 800px;"></div>
+    <div id="map" style="width:100%; height: 106%;"></div>
     <div id="image-buttons">
 
         <button id="search-button">
@@ -45,60 +42,58 @@
             <input type="text" placeholder="검색어를 입력하세요">
         </div> -->
 
-
-        <select id="search-bar">
-            <option value="namSan">남산공원</option>
-            <option value="gangnamMICE">강남 MICE 관광특구</option>
-            <option value="dongdaemun">동대문 관광특구</option>
-            <option value="myeongDong">명동 관광특구</option>
-            <option value="itaewon">이태원 관광특구</option>
-            <option value="jamsil">잠실 관광특구</option>
-            <option value="jongnoCheonggye">종로·청계 관광특구</option>
-            <option value="hongdae">홍대 관광특구</option>
-            <option value="gyeongbokgungSeochon">경복궁·서촌마을</option>
-            <option value="gwanghwamunDeoksugung">광화문·덕수궁</option>
-            <option value="changdeokgungJongmyo">창덕궁·종묘</option>
-            <option value="gasanDigital">가산디지털단지역</option>
-            <option value="gangnam">강남역</option>
-            <option value="konkukUniv">건대입구역</option>
-            <option value="expressBusTerm">고속터미널역</option>
-            <option value="gyodae">교대역</option>
-            <option value="guroDigital">구로디지털단지역</option>
-            <option value="seoul">서울역</option>
-            <option value="seolleung">선릉역</option>
-            <option value="sindorim">신도림역</option>
-            <option value="sinrim">신림역</option>
-            <option value="sinchonEwha">신촌·이대역</option>
-            <option value="yeoksam">역삼역</option>
-            <option value="yeonsinnae">연신내역</option>
-            <option value="yongsan">용산역</option>
-            <option value="wangsimni">왕십리역</option>
-            <option value="DMC">DMC(디지털미디어시티)</option>
-            <option value="changdongEco">창동 신경제 중심지</option>
-            <option value="noryangjin">노량진</option>
-            <option value="naksanIhwa">낙산공원·이화마을</option>
-            <option value="bukchonHanok">북촌한옥마을</option>
-            <option value="garosu-gil">가로수길</option>
-            <option value="seongsuCafe">성수카페거리</option>
-            <option value="suyuEating">수유리 먹자골목</option>
-            <option value="ssangmunEating">쌍문동 맛집거리</option>
-            <option value="apgujeongRodeo">압구정로데오거리</option>
-            <option value="yeouido">여의도</option>
-            <option value="yeongdeungpoTimesSquare">영등포 타임스퀘어</option>
-            <option value="insadongIksundong">인사동·익선동</option>
-            <option value="nationalMuseumYongsan">국립중앙박물관·용산가족공원</option>
-            <option value="tukseomHangang">뚝섬한강공원</option>
-            <option value="mangwonHangang">망원한강공원</option>
-            <option value="banpoHangang">반포한강공원</option>
-            <option value="bukseoulDreamForest">북서울꿈의숲</option>
-            <option value="seoulGrandPark">서울대공원</option>
-            <option value="seoulForestPark">서울숲공원</option>
-            <option value="worldCupPark">월드컵공원</option>
-            <option value="ichonHangang">이촌한강공원</option>
-            <option value="jamsilSportsComplex">잠실종합운동장</option>
-            <option value="jamsilHangang">잠실한강공원</option>
+        <select id="search-bar" onchange="">
+            <option value="남산공원">남산공원</option>
+            <option value="강남 MICE 관광특구">강남 MICE 관광특구</option>
+            <option value="동대문 관광특구">동대문 관광특구</option>
+            <option value="명동 관광특구">명동 관광특구</option>
+            <option value="이태원 관광특구">이태원 관광특구</option>
+            <option value="잠실 관광특구">잠실 관광특구</option>
+            <option value="종로·청계 관광특구">종로·청계 관광특구</option>
+            <option value="홍대 관광특구">홍대 관광특구</option>
+            <option value="경복궁·서촌마을">경복궁·서촌마을</option>
+            <option value="광화문·덕수궁">광화문·덕수궁</option>
+            <option value="창덕궁·종묘">창덕궁·종묘</option>
+            <option value="가산디지털단지역">가산디지털단지역</option>
+            <option value="강남역">강남역</option>
+            <option value="건대입구역">건대입구역</option>
+            <option value="고속터미널역">고속터미널역</option>
+            <option value="교대역">교대역</option>
+            <option value="구로디지털단지역">구로디지털단지역</option>
+            <option value="서울역">서울역</option>
+            <option value="선릉역">선릉역</option>
+            <option value="신도림역">신도림역</option>
+            <option value="신림역">신림역</option>
+            <option value="신촌·이대역">신촌·이대역</option>
+            <option value="역삼역">역삼역</option>
+            <option value="연신내역">연신내역</option>
+            <option value="용산역">용산역</option>
+            <option value="왕십리역">왕십리역</option>
+            <option value="DMC(디지털미디어시티)">DMC(디지털미디어시티)</option>
+            <option value="창동 신경제 중심지">창동 신경제 중심지</option>
+            <option value="노량진">노량진</option>
+            <option value="낙산공원·이화마을">낙산공원·이화마을</option>
+            <option value="북촌한옥마을">북촌한옥마을</option>
+            <option value="가로수길">가로수길</option>
+            <option value="성수카페거리">성수카페거리</option>
+            <option value="수유리 먹자골목">수유리 먹자골목</option>
+            <option value="쌍문동 맛집거리">쌍문동 맛집거리</option>
+            <option value="압구정로데오거리">압구정로데오거리</option>
+            <option value="여의도">여의도</option>
+            <option value="영등포 타임스퀘어">영등포 타임스퀘어</option>
+            <option value="인사동·익선동">인사동·익선동</option>
+            <option value="국립중앙박물관·용산가족공원">국립중앙박물관·용산가족공원</option>
+            <option value="뚝섬한강공원">뚝섬한강공원</option>
+            <option value="망원한강공원">망원한강공원</option>
+            <option value="반포한강공원">반포한강공원</option>
+            <option value="북서울꿈의숲">북서울꿈의숲</option>
+            <option value="서울대공원">서울대공원</option>
+            <option value="서울숲공원">서울숲공원</option>
+            <option value="월드컵공원">월드컵공원</option>
+            <option value="이촌한강공원">이촌한강공원</option>
+            <option value="잠실종합운동장">잠실종합운동장</option>
+            <option value="잠실한강공원">잠실한강공원</option>
         </select>
-
 
         <button id="refresh-button">
             <img src="../public/images/reload.png" alt="Image">
@@ -134,6 +129,7 @@
 
     <!-- 날씨, 인구혼잡도, 교통 모달창 (see버튼 클릭시 보여줄것) -->
     <div class="modal">
+        <!-- <div class="close"></div> -->
 
         <div class="modal_small" id="weather">
             <p>날씨</p>
@@ -149,7 +145,7 @@
 
         <div class="modal_small" id="road">
             <p>도로소통 단계</p>
-            <div class="description_now">정체</div>
+            <div class="description_now" id="road_desc">정체</div>
             <div class="small">
                 <button class="see__more" id="road_click">자세히 보기</button>
             </div>
@@ -157,16 +153,25 @@
 
         <div class="modal_small" id="person">
             <p>인구 혼잡도</p>
-            <div class="description_now">혼잡</div>
+            <div class="description_now" id="people_desc">혼잡</div>
             <div class="small">
                 <button class="see__more" id="person_click">자세히 보기</button>
             </div>
         </div>
-        <!-- <div class="close"></div> -->
+
+    </div>
 
 
 
-        <!-- 자세히 보기 클릭시 -->
+
+
+
+
+
+
+
+    <!-- 자세히 보기 클릭시 -->
+    <div class="modal_big" id="modal_more_box">
         <div class="modal2">
             <div class="close"></div>
             <div class="modal_More">
@@ -174,7 +179,13 @@
 
                 <div id="weather_box_big">
                     <img src="../public/images/rain.png" id="weather_big">
-                    <div class="description_now"> 15º</div>
+                    <br>
+                    최저 / 최고 기온
+                    <div class="description_now2" id="wt_des"> 잠시만 기다려 주세요 </div>
+                    습도, 강수량, 확률
+                    <div class="description_now2" id="wt_rain"> </div>
+                    날씨 정보
+                    <div class="description_now2" id="wt_rain_des"> </div>
                 </div>
             </div>
         </div>
@@ -188,11 +199,18 @@
                 <p>인구 혼잡도</p>
 
                 <div id="weather_box_big">
-                    <img src="../public/images/rain.png" id="weather_big">
-                    <div class="description_now"> 15º</div>
+                    <img src="../public/images/peopel.png" id="road_big">
+                    <br>
+                    인구 혼잡도
+                    <div class="description_now2" id="live_people"> 잠시만 기다려 주세요 </div>
+                    메세지
+                    <div class="description_now2 msg_desc" id="live_msg"> </div>
+                    인구 지표 / 유동인구 비율
+                    <div class="description_now2" id="live_tb"> </div>
                 </div>
             </div>
         </div>
+
 
 
         <div class="modal4">
@@ -203,11 +221,18 @@
 
                 <div id="weather_box_big">
                     <img src="../public/images/rain.png" id="weather_big">
-                    <div class="description_now"> 15º</div>
+                    <br>
+                    도로 상황
+                    <div class="description_now2" id="road_Traffic"> 잠시만 기다려 주세요 </div>
+                    메세지
+                    <div class="description_now2 msg_desc" id="road_msg"> </div>
+                    전체도로 평균 속도
+                    <div class="description_now2" id="road_spd"> </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 
@@ -224,6 +249,7 @@
 
 
     <!-- 지도 -->
+    <script type="module" src="../src/controller/map_inner.js" defer></script>
     <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=440d4850306225a19c1ade5724a9c73d&libraries=services"></script>
     <script defer>
