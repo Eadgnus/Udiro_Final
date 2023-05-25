@@ -89,26 +89,26 @@
 
 
             <!-- 닉네임 -->
-            <div id="my__Acount__nickname" class="mypage__innerDiv">
+            <!-- <div id="my__Acount__nickname" class="mypage__innerDiv">
                 <div id="my__Acount__nickname__text">
                     <h3>닉네임</h3>
-                    <p class="nickname__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sicksick2</p>
+                    <p id="nickname" class="nickname__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sicksick2</p>
                 </div>
                 <div id="my__Acount__nickname__update">
-                    <button id="nickname__update__btn" class="mypage__btn">편집</button>
+                    <button id="nickname__update__btn" class="mypage__btn" onclick="editNickname()">편집</button>
                 </div>
             </div>
-            <hr>
+            <hr> -->
             <!-- 닉네임 끝 -->
 
             <!-- 이메일 주소 -->
             <div id="my__Acount__email" class="mypage__innerDiv">
                 <div id="my__Acount__email__text">
                     <h3>이메일</h3>
-                    <p class="email__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de_crystal@naver.com</p>
+                    <p id="email" class="email__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de_crystal@naver.com</p>
                 </div>
                 <div id="my__Acount__email__update">
-                    <button id="email__update__btn" class="mypage__btn">편집</button>
+                    <button id="email__update__btn" class="mypage__btn" onclick="editemail()">편집</button>
                 </div>
             </div>
             <hr>
@@ -119,10 +119,10 @@
             <div id="my__Acount__phone" class="mypage__innerDiv">
                 <div id="my__Acount__phone__text">
                     <h3>휴대폰 번호</h3>
-                    <p class="phone__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010-1234-1234</p>
+                    <p id="phonenumber" class="phone__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010-1234-1234</p>
                 </div>
                 <div id="my__Acount__phone__update">
-                    <button id="email__phone__btn" class="mypage__btn">편집</button>
+                    <button id="email__phone__btn" class="mypage__btn" onclick="editphonenumber()">편집</button>
                 </div>
             </div>
             <hr>
@@ -153,10 +153,10 @@
             <div id="my__Acount__favorite__area" class="mypage__innerDiv">
                 <div id="my__Acount__favorite__area__text">
                     <h3>자주가는 지역</h3>
-                    <p class="favorite__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;역삼역</p>
+                    <p id="usuallylocal" class="favorite__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;역삼역</p>
                 </div>
                 <div id="my__Acount__favorite__area__update">
-                    <button id="favorite__area__btn" class="mypage__btn">편집</button>
+                    <button id="favorite__area__btn" class="mypage__btn" onclick="editusuallylocal()">편집</button>
                 </div>
             </div>
             <hr>
@@ -173,7 +173,7 @@
                     </div>
                 </div>
                 <div id="my__Acount__favorite__area__update">
-                    <button id="favorite__area__btn" class="mypage__btn">편집</button>
+                    <button id="favorite__area__btn2" class="mypage__btn" onclick="editjjuim()">편집</button>
                 </div>
             </div>
             <hr>
@@ -187,7 +187,7 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;내 계정을 삭제하면 더이상 UDiro에 로그인 할수 없게 됩니다.</p>
                 </div>
                 <div id="my__Acount__delete">
-                    <button id="name__delete__btn" class="mypage__btn">계정 삭제</button>
+                    <button id="name__delete__btn" class="mypage__btn" onclick="showConfirmation()">계정 삭제</button>
                 </div>
             </div>
 
@@ -201,6 +201,130 @@
     </div>
 
 
+    <script>
+        function editNickname() {
+            var nicknameText = document.getElementById("nickname");
+            var currentNickname = nicknameText.innerText.trim();
+            var nicknameInput = document.createElement("input");
+            nicknameInput.type = "text";
+            nicknameInput.value = currentNickname;
+
+            // Replace the nickname text with an input element
+            nicknameText.innerText = "";
+            nicknameText.appendChild(nicknameInput);
+
+            // Change the button text to "저장" (Save)
+            var nicknameBtn = document.getElementById("nickname__update__btn");
+            nicknameBtn.innerText = "저장";
+
+            // Add click event to the "저장" (Save) button
+            nicknameBtn.onclick = function () {
+                var newNickname = nicknameInput.value;
+                // Perform the save/update logic here
+                // For this example, we simply update the nickname text
+                nicknameText.innerText = newNickname;
+                // Change the button text back to "편집" (Edit)
+                nicknameBtn.innerText = "편집";
+                // Reset the button click event to editNickname()
+                nicknameBtn.onclick = editNickname;
+            };
+        }
+        function editemail() {
+            var emailText = document.getElementById("email");
+            var currentemail = emailText.innerText.trim();
+            var emailInput = document.createElement("input");
+            emailInput.type = "text";
+            emailInput.value = currentemail;
+
+            emailText.innerText = "";
+            emailText.appendChild(emailInput);
+
+            var emailBtn = document.getElementById("email__update__btn");
+            emailBtn.innerText = "저장";
+
+            emailBtn.onclick = function () {
+                var newemail = emailInput.value;
+                emailText.innerText = newemail;
+                emailBtn.innerText = "편집";
+                emailBtn.onclick = editemail;
+            };
+        }
+
+        function editphonenumber() {
+            var phonenumberText = document.getElementById("phonenumber");
+            var currentphonenumber = phonenumberText.innerText.trim();
+            var phonenumberInput = document.createElement("input");
+            phonenumberInput.type = "text";
+            phonenumberInput.value = currentphonenumber;
+
+            phonenumberText.innerText = "";
+            phonenumberText.appendChild(phonenumberInput);
+
+            var phonenumberBtn = document.getElementById("email__phone__btn");
+            phonenumberBtn.innerText = "저장";
+
+            phonenumberBtn.onclick = function () {
+                var newphonenumber = phonenumberInput.value;
+                phonenumberText.innerText = newphonenumber;
+                phonenumberBtn.innerText = "편집";
+                phonenumberBtn.onclick = editphonenumber;
+            };
+        }
+
+        function editusuallylocal() {
+            var usuallylocalText = document.getElementById("usuallylocal");
+            var currentusuallylocal = usuallylocalText.innerText.trim();
+            var usuallylocalInput = document.createElement("input");
+            usuallylocalInput.type = "text";
+            usuallylocalInput.value = currentusuallylocal;
+
+            usuallylocalText.innerText = "";
+            usuallylocalText.appendChild(usuallylocalInput);
+
+            var usuallylocalBtn = document.getElementById("favorite__area__btn");
+            usuallylocalBtn.innerText = "저장";
+
+            usuallylocalBtn.onclick = function () {
+                var newusuallylocal = usuallylocalInput.value;
+                usuallylocalText.innerText = newusuallylocal;
+                usuallylocalBtn.innerText = "편집";
+                usuallylocalBtn.onclick = editusuallylocal;
+            };
+        }
+
+
+        function editjjuim() {
+            var jjuimText = document.getElementById("jjuim");
+            var currentjjuim = jjuimText.innerText.trim();
+            var jjuimInput = document.createElement("input");
+            jjuimInput.type = "text";
+            jjuimInput.value = currentjjuim;
+
+            jjuimText.innerText = "";
+            jjuimText.appendChild(jjuimInput);
+
+            var jjuimBtn = document.getElementById("favorite__area__btn2");
+            jjuimBtn.innerText = "저장";
+
+            jjuimBtn.onclick = function () {
+                var newjjuim = jjuimInput.value;
+                jjuimText.innerText = newjjuim;
+                jjuimBtn.innerText = "편집";
+                jjuimBtn.onclick = editjjuim;
+            };
+        }
+
+        function showConfirmation() {
+            const confirmation = confirm('정말로 사용자를 삭제하시겠습니까?');
+
+            if (confirmation) {
+                deleteData();
+            }
+        }
+        function deleteData() {
+            console.log('사용자 정보 삭제');
+        }
+    </script>
 
     <script src="../public/js/location/mypage.js"></script>
 </body>

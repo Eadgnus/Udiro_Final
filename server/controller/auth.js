@@ -49,6 +49,36 @@ export async function findId(req, res, next) {
     res.status(200).json({ token: req.token, user_id: user.user_id });
 }
 
+// export async function deleteById(req, res, next) {
+//     const { user_id } = req.body;
+//     const user = await (userRepository.searchById(user_id));
+//     if (!user) {
+//         return res.status(404).json({ message: "사용자가 존재하지 않습니다." })
+//     }
+//     res.status(200).json({ token: req.token, user_id: user.user_id });
+// }
+
+// DELETE
+export async function deleteById(req, res, next) {
+    const id = req.body.user_id; // req.body.id 와 req.params.id 의 차이점 확인
+    // console.log(id) 아이디 넘어오는거 확인됨
+
+    const user = await userRepository.searchById(id);
+
+    if (!user) {
+        return res.status(404).json({ message: `유저 id(${id}) is not found` });
+    }
+
+    // if (user.user_id !== id) {
+    //   return res.status(403).json({ message: '본인확인 먼저해!' });
+    // }
+
+    await userRepository.deleteUser(id); // deleteUser -> deleteById로 변경
+    res.sendStatus(204);
+};
+
+
+
 export async function findPw(req, res, next) {
     const { user_id, user_phone } = req.body;
     const user = await (userRepository.searchByIdHP(user_id, user_phone));
@@ -68,6 +98,45 @@ export async function updatePw(req, res, next) {
 
     res.status(200).json({ token: req.token, user_id: user.user_id });
 }
+
+
+// export async function updateMypage(req, res, next) {
+//     const { user_id, user_phone, user_email, user_area } = req.body;
+//     const user = await userRepository.searchByIdHP(user_id, user_phone);
+//     if (!user) {
+//         return res.status(404).json({ message: "사용자가 존재하지 않습니다." })
+//     }
+//     //  수정해주기
+//     const updated = await userRepository.updateMypage(user_id, user_phone, user_email, user_area)
+
+
+//     res.status(200).json({ token: req.token, updated });
+// }
+export async function C_updateMypage(req, res, next) {
+    try {
+        const { user_id, user_phone, user_email, user_area } = req.body;
+        const user = await userRepository.searchById(user_id);
+        if (!user) {
+            throw new Error('사용자가 존재하지 않습니다.')
+        }
+        user.user_id = user_id
+        user.user_phone = user_phone;
+        user.user_email = user_email;
+        user.user_area = user_area;
+        const updatedUser = await user.save();
+
+        res.status(200).json()
+        return updatedUser
+    } catch (err) {
+        console.error('DB 업데이트 중 오류가 발생하였습니다.', err);
+        return res.status(500).send('오류야')
+    }
+}
+
+
+
+
+
 
 export async function me(req, res, next) {
     const user = await (userRepository.searchByIdx(req.user_idx));

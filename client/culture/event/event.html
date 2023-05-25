@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>행사/공연 페이지</title>
+    <title>장소페이지</title>
     <link rel="stylesheet" href="../../public/css/culture.css">
     <link rel="stylesheet" href="../../public/public.css">
     <link rel="stylesheet" href="../../public/css/culture_event.css">
-    <script src="../culture.js"></script>
+    <script defer src="../culture.js"></script>
+    <script src="./festa.js" defer></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head>
 
 <body>
-
     <!-- 헤더 -->
     <header id="header" class="header">
         <!-- 헤더 로고 -->
@@ -22,8 +22,6 @@
             <img src="../../public/images/UDiro_seoul_logo2.png" alt="" id="header__logo__img">
         </div>
         <!-- 헤더 로고 끝 -->
-
-
 
         <!-- 헤더 메뉴 시작 -->
         <ul id="header__menu">
@@ -38,7 +36,6 @@
     </header>
     <!-- 헤더 끝 -->
 
-
     <div id="big__container">
         <!-- 사이드 바 -->
         <div id="side__bar">
@@ -46,7 +43,6 @@
                 <li class="side__bar__li sidebar__bigMenu">문화</li>
                 <li class="side__bar__li sidebar__midMenu">메인</li>
                 <hr>
-                <li class="side__bar__li sidebar__smallMenu">공연</li>
                 <li class="side__bar__li sidebar__smallMenu">행사</li>
                 <li class="side__bar__li sidebar__smallMenu">장소</li>
             </ul>
@@ -63,194 +59,37 @@
                     <p class="mainimagetext2">서울의 문화를 더 알고 싶다면</p>
                 </div>
             </div>
-
             <!-- 문화정보 - 서울의 문화를 더 알고 싶다면 끝 -->
+
             <!-- 문화정보- 간략 내용 시작 -->
             <div class="intro-top clearfix">
                 <div class="img-box">
-                    <img src="./festa.PNG" style="background-size: cover;">
+                    <img src="" style="background-size: cover;">
                 </div>
                 <div class="txt-box">
-                    <div class="likeandview2">
-                        <!-- <div>
-                            <button class="ilike">
-                                <span class="likecolor">❤ 추천해요</span>
-                            </button>
-                        </div> -->
-                        <div class="goright">
-                            <span class="viewers">👀10</span>
-                            <span class="likes">❤2</span>
-                        </div>
-
-                    </div>
-                    <div class="event-title">
-                        <h2>어린이날 기획 공연 : 연희집단 [THE 광대]</h2>
-                    </div>
-                    <div class="type-box">
-                        <ul>
-                            <li>
-                                <div class="type-th">
-                                    <span>장소</span>
-                                </div>
-                                <div class="type-td">
-                                    <span>서울공예박물관 공예마당 (우천 시 전시1동 1층 로비)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="type-th">
-                                    <span>기간</span>
-                                </div>
-                                <div class="type-td">
-                                    <span>
-                                        2023-05-05
-                                        ~
-                                        2023-05-05
-                                    </span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="type-th">
-                                    <span>시간</span>
-                                </div>
-                                <div class="type-td">
-                                    <span>15:45~17:00</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="type-th">
-                                    <span>대상</span>
-                                </div>
-                                <div class="type-td">
-                                    <span>남녀노소 누구나!</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="type-th">
-                                    <span>요금</span>
-                                </div>
-                                <div class="type-td">
-                                    <span>무료</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="type-th">
-                                    <span>문의</span>
-                                </div>
-                                <div class="type-td">
-                                    <span>02-6450-7073</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="type-th">
-                                    <span>장르</span>
-                                </div>
-                                <div class="type-td">
-                                    <span>공연 / 연극</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="type-th">
-                                    <span>홈페이지</span>
-                                </div>
-                                <div class="type-td">
-                                    <div class="detail-btn">
-                                        <span><a href="https://www.instagram.com/p/CrlAgt0phVw/" target="_blank">홈페이지
-                                                바로가기</a></span>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
                 </div>
             </div>
             <!-- 문화정보- 간략 내용 끝 -->
 
             <!-- <section class="intro-section common-section">
-                <h2> 상세보기 </h2>
+                <h2> 행사 설명 (설명이 없는 건 원래 없는 것) </h2>
             </section>
             <div class="moreview">
-                <div style="text-align: center;" align="center">
-                    <div style="text-align: center;" align="center"><span style="font-size: 18.6667px;">
-                            <b>연희집단 THE 광대</b></span></div>
-                    <div style="text-align: center;" align="center">
-                        <span style="font-size: 18.6667px;"><br></span>
-                    </div>
-                    <div style="text-align: center;" align="center">
-                        <span style="font-size: 18.6667px;">서울공예박물관에서 어린이날을 맞이해<b> ‘연희집단 THE 광대’</b>와 함께</span>
-                    </div>
-                    <div style="text-align: center;" align="center"><span style="font-size: 18.6667px;">온 가족이 즐길 수 있는
-                            전통연희
-                            퍼포먼스 공연을 개최합니다.</span></div>
-                    <div style="text-align: center;" align="center">
-                        <span style="font-size: 18.6667px;">풍물 길놀이를 시작으로 사자놀이, 버나놀이, 상모놀이 등</span>
-                    </div>
-                    <div style="text-align: center;" align="center">
-                        <span style="font-size: 18.6667px;">신명나는 전통놀이들이 공예마당에서 펼쳐질 예정입니다.&nbsp;</span>
-                    </div>
-                    <div style="text-align: center;" align="center"><span style="font-size: 18.6667px;"><br></span>
-                    </div>
-                    <div style="text-align: center;" align="center"><span style="font-size: 18.6667px;">우리나라 전통 악기와 연희
-                            도구들에
-                            담긴 민속 공예 이야기를 함께 담아내어</span></div>
-                    <div style="text-align: center;" align="center"><span style="font-size: 18.6667px;">공예와 전통 공연의 만남을
-                            확인해
-                            보세요!</span></div>
-                    <div style="text-align: center;" align="center"><span style="font-size: 18.6667px;"><br></span>
-                    </div>
-                    <div style="text-align: center;" align="center"><span style="font-size: 18.6667px;">※ 행사장 방문 시
-                            대중교통(3호선
-                            안국역 1번 출구) 이용 부탁드립니다.</span></div>
-                    <div style="text-align: center;" align="center"><span style="font-size: 18.6667px;">※ 우천 시 전시1동 1층
-                            로비에서
-                            공연이 진행됩니다.</span></div>
-                    <div style="text-align: center;" align="center">
-                        <span style="font-size: 18.6667px;"><br></span>
-                    </div>
-                    <div style="text-align: center;" align="center">
-                        <span style="font-size: 18.6667px;"><br></span>
-                    </div>
-                    <div style="text-align: center;" align="center"><span style="font-size: 18.6667px;"><br></span>
-                    </div>
-                    <div style="text-align: center;" align="center">
-                        <span style="font-size: 18.6667px;">※ 해당 행사 상세 정보는 상단의 '홈페이지 바로가기' 에서 참고 부탁드립니다.</span><br>
-                    </div>
-                </div>
-            </div> -->
+            </div>
             <section class="loca-section common-section">
                 <h2>위치안내</h2>
                 <div class="map-area">
-                    <div id="map"
-                        style="width: 100%; height: 500px; position: relative; overflow: hidden; background: url(&quot;https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png&quot;);">
-                    </div>
-            </section>
-            <div class="view-btn clearfix">
-                <div class="prev-btn">
-
-                    <span class="txt">이전글</span>
-                    <span class="placeholder_color">[서울애니메이션센터] 도심 속 문화체험공간! 만화도서관 &amp; 애니소풍</span>
-
                 </div>
-                <div class="next-btn">
-
-                    <span class="placeholder_color">2023 서울책보고 금요북클럽(5월)</span>
-                    <span class="txt">다음글</span>
-
-                </div>
-            </div>
+            </section> -->
             <div class="list-btn" style="text-align:center;">
-                목록으로
+                <a href="http://127.0.0.1:5501/client/culture/culture_main.html">목록으로</a>
             </div>
-
-
         </div>
-        <!-- 전체 컨테이너 끝 -->
         <div id="centerGo"></div>
+
     </div>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOmftdmDviuSfAficmyQnaMcZE6NmVfQM&callback=initMap&v=weekly"
-        defer></script>
-    <script src="../../public/js/location/header2.js" defer></script>
+    <!-- 전체 컨테이너 끝 -->
+    <script src="../../public/js/location/header2.js"></script>
 </body>
 
 </html>
