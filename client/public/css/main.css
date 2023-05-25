@@ -110,7 +110,7 @@ header>ul>li {
 #Search__description {
     /* 검색창의 search 부분 div*/
     text-align: center;
-    width: 54%;
+    width: 66%;
     height: 50px;
     font-size: 26px;
     line-height: 50px;
@@ -128,12 +128,13 @@ header>ul>li {
     color: black;
 }
 
-#search__filter>option {
-    color: black;
+#search__bar>option {
+    color: #10376e;
 }
 
 
 #search__bar {
+    color: #10376e;
     width: 400px;
     height: 40px;
     padding: 0 10px;

@@ -20,4 +20,6 @@ router.put('/mypage', authController.C_updateMypage)
 router.delete('/mypage', authController.deleteById)
 
 
+
+
 export default router;
