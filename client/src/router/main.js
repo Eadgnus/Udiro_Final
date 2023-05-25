@@ -14,14 +14,15 @@ function peopelNum() {
                     const token = data.token;
                     // window.location.href = '../main/index.html'; // 로그인 성공 시 index.html로 리디렉션
                     const peopleNum = document.getElementById('peopleNum')
-
+                    // 버튼 엘리먼트 선택하기
+                    const prevBtn = document.querySelector(".slide_prev_button");
+                    const nextBtn = document.querySelector(".slide_next_button");
                     data.forEach((i, index) => {
                         // if (i['congest_level'] == '여유') {
                         //     peopelNum.classList('')
                         // }
                         setTimeout(() => {
                             peopleNum.innerHTML = `${i['name']} ${i['max_population']}명`;
-                            console.log(i);
                         }, 3000 * index);
                     });
 

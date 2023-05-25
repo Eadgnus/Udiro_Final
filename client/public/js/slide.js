@@ -252,19 +252,19 @@ let loopInterval = setInterval(() => {
 // }
 
 
-// 슬라이드에 마우스가 올라간 경우 루프 멈추기
-slide.addEventListener("mouseover", () => {
-    clearInterval(loopInterval);
-    stopSlides();
-});
+// // 슬라이드에 마우스가 올라간 경우 루프 멈추기
+// slide.addEventListener("mouseover", () => {
+//     clearInterval(loopInterval);
+//     stopSlides();
+// });
 
-// 슬라이드에서 마우스가 나온 경우 루프 재시작하기
-slide.addEventListener("mouseout", () => {
-    loopInterval = setInterval(() => {
-        nextMove();
-        startSlideShow();
-    }, 3000);
-});
+// // 슬라이드에서 마우스가 나온 경우 루프 재시작하기
+// slide.addEventListener("mouseout", () => {
+//     loopInterval = setInterval(() => {
+//         nextMove();
+//         // startSlideShow();
+//     }, 3000);
+// });
 
 
 
