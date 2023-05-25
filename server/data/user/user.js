@@ -63,8 +63,11 @@ export async function createUser(user) {
 
 export async function searchById(user_id) {
     const user = await User.findOne({ where: { user_id: user_id } });
-    const userid = user.dataValues.user_id
-    return userid
+    try {
+        return user
+    } catch (e) {
+        console.log('이미 삭제되었거나 존재하지 않는 회원입니다.', e)
+    }
     // user아이디 넘어오는것 확인
 }
 

@@ -119,6 +119,7 @@ export async function C_updateMypage(req, res, next) {
         if (!user) {
             throw new Error('사용자가 존재하지 않습니다.')
         }
+
         user.user_id = user_id
         user.user_phone = user_phone;
         user.user_email = user_email;

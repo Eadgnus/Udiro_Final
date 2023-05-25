@@ -18,7 +18,7 @@ function fetchDataFesta(festanum) {
         });
 }
 
-function processDataFesta(data) {
+async function processDataFesta(data) {
     // 데이터 처리
     const festasContainer = document.querySelector('.txt-box');
     const imgContainer = document.querySelector('.img-box');

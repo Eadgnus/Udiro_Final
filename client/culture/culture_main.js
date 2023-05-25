@@ -36,7 +36,7 @@ function fetchDataPlace(placenum) {
 }
 
 // 함수-----------------------------------------
-function processDataAllf(data, festanum) {
+async function processDataAllf(data, festanum) {
     // 데이터 처리
     const festivalsContainer = document.querySelector('.festival__container');
 
@@ -56,24 +56,24 @@ function processDataAllf(data, festanum) {
     const imgElement = document.createElement('img');
     imgElement.id = festanum;
     imgElement.src = data.MAIN_IMG;
-    festivalElement.appendChild(imgElement);
+    await festivalElement.appendChild(imgElement);
 
     // 텍스트 요소 생성
     const txtElement = document.createElement('div');
     txtElement.className = 'txt';
-    festivalElement.appendChild(txtElement);
+    await festivalElement.appendChild(txtElement);
 
     const titleElement = document.createElement('h2');
     titleElement.textContent = data.TITLE;
-    txtElement.appendChild(titleElement);
+    await txtElement.appendChild(titleElement);
 
     const fplaceElement = document.createElement('span');
     fplaceElement.textContent = data.PLACE;
-    txtElement.appendChild(fplaceElement);
+    await txtElement.appendChild(fplaceElement);
 
     const dateElement = document.createElement('div');
     dateElement.className = 'date';
-    txtElement.appendChild(dateElement);
+    await txtElement.appendChild(dateElement);
 
     const startDate = new Date(data.STRTDATE);
     const formattedStartDate = startDate.toISOString().split('T')[0];
@@ -84,10 +84,10 @@ function processDataAllf(data, festanum) {
 
     const dateRangeSpan = document.createElement('span');
     dateRangeSpan.textContent = dateRange;
-    dateElement.appendChild(dateRangeSpan);
+    await dateElement.appendChild(dateRangeSpan);
 }
 
-function processDataAll(data, placenum) {
+async function processDataAll(data, placenum) {
     // 데이터 처리
     const placesContainer = document.querySelector('.place__container');
 
@@ -107,22 +107,22 @@ function processDataAll(data, placenum) {
     const imgElement = document.createElement('img');
     imgElement.id = placenum;
     imgElement.src = data.MAIN_IMG;
-    PlaceElement.appendChild(imgElement);
+    await PlaceElement.appendChild(imgElement);
 
     // 텍스트 요소 생성
     const txtElement = document.createElement('div');
     txtElement.className = 'txt';
-    PlaceElement.appendChild(txtElement);
+    await PlaceElement.appendChild(txtElement);
 
     const titleElement = document.createElement('h2');
     titleElement.textContent = data.FAC_NAME;
-    txtElement.appendChild(titleElement);
+    await txtElement.appendChild(titleElement);
 
     const addrElement = document.createElement('div');
     addrElement.className = 'addr';
-    txtElement.appendChild(addrElement);
+    await txtElement.appendChild(addrElement);
 
     const addressElement = document.createElement('span');
     addressElement.textContent = data.ADDR;
-    txtElement.appendChild(addressElement);
+    await txtElement.appendChild(addressElement);
 }
