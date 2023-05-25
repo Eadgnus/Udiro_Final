@@ -3,30 +3,31 @@ const urlParams = new URLSearchParams(queryString);
 const placenum = urlParams.get('placeId');
 
 function fetchDataPlace(placenum) {
-    fetch(`http://localhost:8080/place/${placenum}`, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        },
+  fetch(`http://localhost:8080/place/${placenum}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      processDataPlace(data);
+      processDataMap(data);
     })
-        .then((response) => response.json())
-        .then((data) => {
-            processDataPlace(data);
-        })
-        .catch((error) => {
-            console.error('에러 발생', error);
-        });
+    .catch((error) => {
+      console.error('에러 발생', error);
+    });
 }
 
 function processDataPlace(data) {
-    // 데이터 처리
-    const placesContainer = document.querySelector('.txt-box');
-    const imgContainer = document.querySelector('.img-box');
-    const textContainer = document.querySelector('.moreview');
+  // 데이터 처리
+  const placesContainer = document.querySelector('.txt-box');
+  const imgContainer = document.querySelector('.img-box');
+  const textContainer = document.querySelector('.moreview');
 
-    const text = `${data.FAC_DESC}`;
-    const img = `<img src="${data.MAIN_IMG}" style="background-size: cover;">`;
-    const html = `
+  const text = `${data.FAC_DESC}`;
+  const img = `<img src="${data.MAIN_IMG}" style="background-size: cover;">`;
+  const html = `
     <div class="event-title2">
         <h2>${data.FAC_NAME}</h2>
     </div>
@@ -87,9 +88,35 @@ function processDataPlace(data) {
     </div>
 `;
 
-    placesContainer.innerHTML = html;
-    imgContainer.innerHTML = img;
-    textContainer.innerHTML = text;
+  placesContainer.innerHTML = html;
+  imgContainer.innerHTML = img;
+  textContainer.innerHTML = text;
+}
+
+function processDataMap(data) {
+  const mapContainer = document.querySelector('#loca-section'); // 클래스로 선택하도록 수정
+
+  const mapHTML = `<h2>위치안내</h2>
+                     <div id="map" style="width:100%; height:600px; margin-bottom: 60px;"></div>`;
+  mapContainer.innerHTML = mapHTML;
+
+  const scriptTag = document.createElement('script');
+  scriptTag.src =
+    '//dapi.kakao.com/v2/maps/sdk.js?appkey=440d4850306225a19c1ade5724a9c73d&libraries=services';
+
+  const mapScript = document.createElement('script');
+  mapScript.innerHTML = `
+      var container = document.getElementById('map');
+      var options = {
+          center: new kakao.maps.LatLng(${data.X_COORD}, ${data.Y_COORD}),
+          level: 3
+      };
+  
+      var map = new kakao.maps.Map(container, options);
+    `;
+
+  mapContainer.appendChild(scriptTag);
+  mapContainer.appendChild(mapScript);
 }
 
 fetchDataPlace(placenum);
