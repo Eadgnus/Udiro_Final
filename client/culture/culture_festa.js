@@ -1,5 +1,5 @@
 function fetchDataFesta(festanum) {
-    fetch(`https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/festa/${festanum}`, {
+    fetch(`http://localhost:8080/festa/${festanum}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

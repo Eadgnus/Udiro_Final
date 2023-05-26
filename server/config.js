@@ -29,5 +29,10 @@ export const config = {
     port: parseInt(required('PORT', 30355)),
     cors: {
         allowedOrigin: required('CORS_ALLOW_ORIGIN')
-    }
+    },
+    email: {
+        port: required("EMAIL_PORT"),
+        id: required("EMAIL_ID"),
+        pw: required("EMAIL_PW"),
+    },
 }
