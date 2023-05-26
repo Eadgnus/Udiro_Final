@@ -4,7 +4,7 @@ for (let i = 1; i <= 10; i++) {
 }
 
 function fetchDataFesta(festanum) {
-    fetch(`http://localhost:8080/festa/${festanum}`, {
+    fetch(`https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/festa/${festanum}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -20,7 +20,7 @@ function fetchDataFesta(festanum) {
 }
 
 function fetchDataPlace(placenum) {
-    fetch(`http://localhost:8080/place/${placenum}`, {
+    fetch(`https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/place/${placenum}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

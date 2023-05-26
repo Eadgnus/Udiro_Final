@@ -2,7 +2,7 @@
 // import { rootURL } from '../network/http.js'
 
 function peopelNum() {
-    fetch('http://localhost:8080/', {
+    fetch('https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/', {
         method: 'get',
         headers: {
             'Content-Type': 'application/json'

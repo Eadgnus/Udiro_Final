@@ -27,4 +27,4 @@ export default class HttpClient {
     }
 }
 
-export const rootURL = 'http://localhost:8080/'
+export const rootURL = 'https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/'

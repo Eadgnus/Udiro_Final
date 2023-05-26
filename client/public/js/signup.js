@@ -13,6 +13,7 @@ function sendit() {
     };
 
     fetch('https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/auth/signup', {
+        // fetch('https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/auth/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -36,5 +37,6 @@ function sendit() {
         .catch(function (error) {
             console.error(error);
             alert('로그인 요청에 실패했습니다.'); // 로그인 요청 실패 시 알림 표시
+            console.log(data)
         });
 }

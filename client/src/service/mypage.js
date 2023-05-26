@@ -1,6 +1,6 @@
 
 function mypageUpdate() {
-    fetch('http://localhost:8080/client/mypage/mypage', {
+    fetch('https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/client/mypage/mypage', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

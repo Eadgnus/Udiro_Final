@@ -27,12 +27,17 @@ export async function signup(req, res, next) {
 
 export async function login(req, res) {
     const { user_id, user_pw } = req.body;
-    const user = await (userRepository.searchById(user_id));
-
+    const user = await userRepository.searchById(user_id);
+    console.log(user);
     if (!user) {
+        console.log('유저객체가 생성이 안됨')
         return res.status(401).json({ message: "아이디 또는 비밀번호를 확인하세요" })
     }
     const isValidpassword = await (bcrypt.compare(user_pw, user.user_pw));
+
+    // 이부분 추가함
+    console.log(isValidpassword)
+
     if (!isValidpassword) {
         return res.status(401).json({ message: "아이디 또는 비밀번호를 확인하세요" })
     }

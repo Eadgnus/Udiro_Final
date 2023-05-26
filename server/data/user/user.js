@@ -33,14 +33,12 @@ export const User = sequelize.define(
         // 이메일
         user_email: {
             type: DataTypes.STRING(128),
-            allowNull: false,
-            unique: true
+            allowNull: false
         },
         // 핸드폰번호
         user_phone: {
             type: DataTypes.STRING(128),
-            allowNull: false,
-            unique: true
+            allowNull: false
         },
         // 자주가는 장소
         user_area: {
