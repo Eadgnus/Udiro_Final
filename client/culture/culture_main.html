@@ -44,10 +44,75 @@
         <div id="side__bar">
             <ul id="side__bar__ul">
                 <li class="side__bar__li sidebar__bigMenu">문화</li>
-                <li class="side__bar__li sidebar__midMenu">메인</li>
+                <li class="side__bar__li sidebar__midMenu">지도</li>
+                <hr>
+                <br>
+                <select id="side__bar__select" onchange="">
+                    <option value="선택">원하는장소 선택</option>
+                    <option value="남산공원">남산공원</option>
+                    <option value="강남 MICE 관광특구">강남 MICE 관광특구</option>
+                    <option value="동대문 관광특구">동대문 관광특구</option>
+                    <option value="명동 관광특구">명동 관광특구</option>
+                    <option value="이태원 관광특구">이태원 관광특구</option>
+                    <option value="잠실 관광특구">잠실 관광특구</option>
+                    <option value="종로·청계 관광특구">종로·청계 관광특구</option>
+                    <option value="홍대 관광특구">홍대 관광특구</option>
+                    <option value="경복궁·서촌마을">경복궁·서촌마을</option>
+                    <option value="광화문·덕수궁">광화문·덕수궁</option>
+                    <option value="창덕궁·종묘">창덕궁·종묘</option>
+                    <option value="가산디지털단지역">가산디지털단지역</option>
+                    <option value="강남역">강남역</option>
+                    <option value="건대입구역">건대입구역</option>
+                    <option value="고속터미널역">고속터미널역</option>
+                    <option value="교대역">교대역</option>
+                    <option value="구로디지털단지역">구로디지털단지역</option>
+                    <option value="서울역">서울역</option>
+                    <option value="선릉역">선릉역</option>
+                    <option value="신도림역">신도림역</option>
+                    <option value="신림역">신림역</option>
+                    <option value="신촌·이대역">신촌·이대역</option>
+                    <option value="역삼역">역삼역</option>
+                    <option value="연신내역">연신내역</option>
+                    <option value="용산역">용산역</option>
+                    <option value="왕십리역">왕십리역</option>
+                    <option value="DMC(디지털미디어시티)">DMC(디지털미디어시티)</option>
+                    <option value="창동 신경제 중심지">창동 신경제 중심지</option>
+                    <option value="노량진">노량진</option>
+                    <option value="낙산공원·이화마을">낙산공원·이화마을</option>
+                    <option value="북촌한옥마을">북촌한옥마을</option>
+                    <option value="가로수길">가로수길</option>
+                    <option value="성수카페거리">성수카페거리</option>
+                    <option value="수유리 먹자골목">수유리 먹자골목</option>
+                    <option value="쌍문동 맛집거리">쌍문동 맛집거리</option>
+                    <option value="압구정로데오거리">압구정로데오거리</option>
+                    <option value="여의도">여의도</option>
+                    <option value="영등포 타임스퀘어">영등포 타임스퀘어</option>
+                    <option value="인사동·익선동">인사동·익선동</option>
+                    <option value="국립중앙박물관·용산가족공원">국립중앙박물관·용산가족공원</option>
+                    <option value="뚝섬한강공원">뚝섬한강공원</option>
+                    <option value="망원한강공원">망원한강공원</option>
+                    <option value="반포한강공원">반포한강공원</option>
+                    <option value="북서울꿈의숲">북서울꿈의숲</option>
+                    <option value="서울대공원">서울대공원</option>
+                    <option value="서울숲공원">서울숲공원</option>
+                    <option value="월드컵공원">월드컵공원</option>
+                    <option value="이촌한강공원">이촌한강공원</option>
+                    <option value="잠실종합운동장">잠실종합운동장</option>
+                    <option value="잠실한강공원">잠실한강공원</option>
+                </select>
+                <br>
+                <br>
+                <hr>
+                
+                <li class="side__bar__li sidebar__midMenu">문화</li>
                 <hr>
                 <li class="side__bar__li sidebar__smallMenu">행사</li>
                 <li class="side__bar__li sidebar__smallMenu">장소</li>
+                <br>
+                <hr>
+                <li class="side__bar__li sidebar__midMenu">마이페이지</li>
+                <hr>
+                <li class="side__bar__li sidebar__smallMenu">내 정보 수정</li>
             </ul>
         </div>
         <!-- 사이드 바 끝 -->
@@ -66,72 +131,110 @@
             <!-- 문화정보 - 서울의 문화를 더 알고 싶다면 끝 -->
 
             <!-- 지역 / 기간 / 분야 / 검색 표 시작 -->
-            <table>
-                <tbody>
-                    <tr>
-                        <td class="lengthlarger">지역</td>
-                        <td colspan="4">
-                            <select name="searchregion" class="tagsize" id="local">
-                                <option value="전체" class="needblack">지역</option>
-                                <option value="강남구" class="needblack">강남구</option>
-                                <option value="강동구" class="needblack">강동구</option>
-                                <option value="강북구" class="needblack">강북구</option>
-                                <option value="강서구" class="needblack">강서구</option>
-                                <option value="관악구" class="needblack">관악구</option>
-                                <option value="광진구" class="needblack">광진구</option>
-                                <option value="구로구" class="needblack">구로구</option>
-                                <option value="금천구" class="needblack">금천구</option>
-                                <option value="노원구" class="needblack">노원구</option>
-                                <option value="도봉구" class="needblack">도봉구</option>
-                                <option value="동대문구" class="needblack">동대문구</option>
-                                <option value="동작구" class="needblack">동작구</option>
-                                <option value="마포구" class="needblack">마포구</option>
-                                <option value="서대문구" class="needblack">서대문구</option>
-                                <option value="서초구" class="needblack">서초구</option>
-                                <option value="성동구" class="needblack">성동구</option>
-                                <option value="성북구" class="needblack">성북구</option>
-                                <option value="송파구" class="needblack">송파구</option>
-                                <option value="양천구" class="needblack">양천구</option>
-                                <option value="영등포구" class="needblack">영등포구</option>
-                                <option value="용산구" class="needblack">용산구</option>
-                                <option value="은평구" class="needblack">은평구</option>
-                                <option value="종로구" class="needblack">종로구</option>
-                                <option value="중구" class="needblack">중구</option>
-                                <option value="중랑구" class="needblack">중랑구</option>
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+            <style>
+                .custom-datepicker {
+                    height: 300px;
+                }
+                .custom-datepicker .ui-datepicker-calendar {
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                }
+            </style>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <script>
+                var datepicker1, datepicker2;
+        
+                $(document).ready(function() {
+                    datepicker1 = $("#datepicker1").datepicker({
+                        beforeShow: function(input, inst) {
+                            inst.dpDiv.addClass("custom-datepicker");
+                        },
+                        onClose: function() {
+                            $("#datepicker2").datepicker("show");
+                        }
+                    }).hide();
+                    datepicker2 = $("#datepicker2").datepicker({
+                        beforeShow: function(input, inst) {
+                            inst.dpDiv.addClass("custom-datepicker");
+                        },
+                        beforeShowDay: function(date) {
+                            var startDate = datepicker1.datepicker("getDate");
+                            var endDate = datepicker2.datepicker("getDate");
+                            if (startDate && !endDate) {
+                                return [true, "selected-range"];
+                            } else if (startDate && endDate && date >= startDate && date <= endDate) {
+                                return [true, "selected-range"];
+                            }
+                            return [true, ""];
+                        }
+                    }).hide();
+                });
+        
+                function setPlaceholder(selectedValue) {
+                    var inputElement = document.getElementById("inputField");
+        
+                    if (selectedValue === "지역") {
+                        inputElement.placeholder = "지역을 입력하세요";
+                        inputElement.type = "text";
+                        hideDatepickers();
+                    } else if (selectedValue === "제목") {
+                        inputElement.placeholder = "제목을 입력하세요";
+                        inputElement.type = "text";
+                        hideDatepickers();
+                    } else if (selectedValue === "내용") {
+                        inputElement.placeholder = "내용을 입력하세요";
+                        inputElement.type = "text";
+                        hideDatepickers();
+                    } else if (selectedValue === "기간") {
+                        inputElement.placeholder = "";
+                        inputElement.type = "hidden";
+                        showDatepickers();
+                    } else {
+                        inputElement.placeholder = "";
+                        inputElement.type = "text";
+                        hideDatepickers();
+                    }
+                }
+        
+                function showDatepickers() {
+                    datepicker1.show();
+                    datepicker2.show();
+                    $("#date-range-separator").show();
+                }
+        
+                function hideDatepickers() {
+                    datepicker1.hide();
+                    datepicker2.hide();
+                    datepicker1.val("");
+                    datepicker2.val("");
+                    $("#date-range-separator").hide();
+                }
+            </script>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="lengthlarger">                            
+                                <select name="searchregion" style="width:10%; height:50%; float:left; left:30px; ">
+                                <option value="전체">전체</option>
+                                <option value="행사">행사</option>
+                                <option value="장소">장소</option>
+                            </select>              
+                            <select onchange="setPlaceholder(this.value)" style="width:15%; height:50%; float:left; left:70px">
+                                <option value="지역"  name="지역">지역</option>
+                                <option value="제목"  name="제목">제목</option>
+                                <option value="내용"  name="내용">내용</option>
+                                <option value="기간"  name="기간">기간</option>
                             </select>
-                            <input maxlength="20" type="text" class="regionsearch" placeholder="제목을 입력하세요">
-                            <button onclick="searchBnt()" type="button" class="needblack" id="searchbar1">검색</button>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td class="lengthlarger">기간</td>
-                        <td colspan="4">
-                            <input type="date" id="datepicker01" autocomplete="off" name="startdate" value="">
-                            <span class="dash">-</span>
-                            <input type="date" id="datepicker02" autocomplete="off" name="enddate" value="">
-                            <button type="button" class="needblack" id="searchbar3">검색</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="lengthlarger">분야</td>
-                        <td>
-                            <select name="searchgenre" class="tagsize2" id="genre">
-                                <option value="" class="needblack"> 행사</option>
-                                <option value="" class="needblack"> 장소</option>
-                            </select>
-                        </td>
-                        <td class="lengthlarger">검색</td>
-                        <td>
-                            <select name="searchgenre" class="tagsize2" id="search">
-                                <option value="" class="needblack"> 제목</option>
-                                <option value="" class="needblack"> 내용</option>
-                            </select>
-                            <input maxlength="10" type="text" class="genresearch">
-                            <button type="button" class="needblack" id="searchbar2">검색</button>
-                        </td>
-                </tbody>
-            </table>
+                            <input type="text" id="inputField" style="width:15%; height:50%; width:500px;">
+                            <input type="text" id="datepicker1" placeholder="시작 날짜" style="width:15%; height:50%; width:250px; right:20px;">       
+                            <input type="text" id="datepicker2" placeholder="종료 날짜" style="width:15%; height:50%; width:250px; left:20px;">
+                            </td>
+                        </tr>
+        </tbody>
+    </table>
+    <br>
             <!-- 지역 / 기간 / 분야 / 검색 표 끝 -->
 
             <!-- 공연,행사, 축제 시작 -->

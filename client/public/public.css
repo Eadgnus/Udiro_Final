@@ -110,7 +110,7 @@ header>ul>li {
     color: white;
     height: 50px;
     line-height: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 
 .sidebar__midMenu {
@@ -130,4 +130,17 @@ header>ul>li {
 
 #centerGo {
     width: 10%;
+}
+
+#side__bar__select {
+    text-align: center;
+    outline: none;
+    border:none;
+}
+
+#side__bar__select option{
+text-align: center;
+outline: none;
+border:none;
+appearance: none;
 }
