@@ -1,0 +1,18 @@
+왼쪽 사이드바 ::
+event.html
+place.html
+culture_main.html
+culture_festa.html
+culture_place.html
+mypage.html
+에 일단 수정함
+
+culture.css << 수정된 내용 있는듯
+
+승수꺼
+네모난 박스 3칸을 1칸으로
+
+culture_main.html
+(에 내용 있음), 
+option value를 선택할 때 원형인 것은 CSS를 하지 않아도 그대로여서,
+일단 둠
