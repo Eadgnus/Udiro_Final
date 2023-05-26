@@ -2,6 +2,7 @@
 import SQ from 'sequelize';
 import { sequelize } from '../db/database.js';
 import axios from 'axios';
+import mariadb from 'mariadb'
 
 const key = '4263715953616e7733346674745448';
 
@@ -94,12 +95,12 @@ export const culture_festa = sequelize.define(
         timestamps: false,
     }
 );
+await sequelize.sync();
 
 const fff = `http://openapi.seoul.go.kr:8088/4263715953616e7733346674745448/json/culturalEventInfo/1/1000/`;
 const sss = `http://openapi.seoul.go.kr:8088/4263715953616e7733346674745448/json/culturalEventInfo/1001/2000/`;
 const ddd = `http://openapi.seoul.go.kr:8088/4263715953616e7733346674745448/json/culturalEventInfo/2001/3000/`;
 const vvv = `http://openapi.seoul.go.kr:8088/4263715953616e7733346674745448/json/culturalEventInfo/3000/3473/`;
-
 async function fetchCultureFestas(url) {
     try {
         const response = await axios.get(url);
@@ -165,14 +166,14 @@ export async function getAll() {
 }
 
 // 수정 -> 필터 포함 시 날짜, 지역, 카테고리로 검색이므로 3가지가 필요
-// export async function getAllByData(username) {
-//     return culture_festa.findAll({
-//         ...ORDER_DESC,
-//         where: {
-//             username
-//         }
-//     });
-// }
+export async function getAllByData(username) {
+    return culture_festa.findAll({
+        ...ORDER_DESC,
+        where: {
+            username
+        }
+    });
+}
 
 export async function getAllByGuname(GUNAME) {
     return culture_festa.findAll({
@@ -192,14 +193,14 @@ export async function getAllByTitle(title) {
     });
 }
 
-// export async function getAllBy(username) {
-//     return culture_festa.findAll({
-//         ...ORDER_DESC,
-//         where: {
-//             username
-//         }
-//     });
-// }
+export async function getAllBy(username) {
+    return culture_festa.findAll({
+        ...ORDER_DESC,
+        where: {
+            username
+        }
+    });
+}
 
 // 바꿀려면 변수 값만 수정하면 됩니다
 export async function getByPK(festa_NUM) {
@@ -227,3 +228,5 @@ export async function remove(festa_NUM) {
         data.destroy();
     });
 }
+
+

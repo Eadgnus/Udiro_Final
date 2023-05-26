@@ -6,10 +6,10 @@ import { getPeopleNum } from './main';
 
 
 const connection = mysql.createConnection({
-    host: 'localhost',
+    host: 'svc.sel4.cloudtype.app',
     user: 'root',
-    password: '1234',
-    database: 'udiro_main'
+    password: 'Js421wltjd@!',
+    database: 'udiro'
 });
 
 

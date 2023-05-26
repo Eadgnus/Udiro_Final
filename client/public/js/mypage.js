@@ -56,7 +56,7 @@ function editemail() {
 
         // 서버 통신부분
         try {
-            const response = await fetch('http://localhost:8080/mypage/update', {
+            const response = await fetch('https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/mypage/update', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -104,7 +104,7 @@ function editphonenumber() {
         confirm('수정하시겠습니까?')
 
         try {
-            const response = await fetch('http://localhost:8080/mypage/update', {
+            const response = await fetch('https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/mypage/update', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -153,7 +153,7 @@ function editusuallylocal() {
         confirm('수정하시겠습니까?')
 
         try {
-            const response = await fetch('http://localhost:8080/mypage/update', {
+            const response = await fetch('https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/mypage/update', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -212,7 +212,7 @@ function showConfirmation() {
 }
 async function deleteData() {
     try {
-        const response = await fetch('http://localhost:8080/mypage/delete', {
+        const response = await fetch('https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/mypage/delete', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

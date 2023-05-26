@@ -120,6 +120,7 @@ export const culture_place = sequelize.define(
     },
     { timestamps: false }
 );
+await sequelize.sync();
 
 const stripHtmlTags = (htmlString) => {
     const regex = /(<([^>]+)>|&lt;|&gt;|&nbsp;)/gi;

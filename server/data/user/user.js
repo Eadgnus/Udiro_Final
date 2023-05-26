@@ -55,6 +55,8 @@ export const User = sequelize.define(
     },
     { timestamps: false } // true면 createdAt, updatedAt 컬럼이 자동으로 생김
 );
+
+await sequelize.sync();
 // user_idx user_name user_id user_pw user_email user_phone user_area
 
 export async function createUser(user) {

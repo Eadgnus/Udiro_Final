@@ -8,11 +8,20 @@ import { config } from "./config.js";
 import { sequelize } from "./db/database.js"
 // import mainController from "./controller/main.js"
 import mainRouter from "./router/main.js"
+import { EventEmitter } from 'events';
+import { initSocket } from './connection/socket.js'
+
+const bus = new EventEmitter();
+bus.setMaxListeners(20);
 
 const app = express();
+const corsOption = {
+    origin: config.cors.allowedOrigin,
+    optionsSuccessStatus: 200
+}
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOption));
 app.use(morgan("tiny"));
 
 app.use("/auth", authRouter);
@@ -33,5 +42,7 @@ app.use((error, req, res, next) => {
 });
 
 sequelize.sync().then(() => {
-    app.listen(config.host.port);
+    console.log(`서버가 시작되었습니다: ${new Date()}`)
+    const server = app.listen(config.host.port);
+    initSocket(server);
 });

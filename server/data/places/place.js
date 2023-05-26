@@ -33,7 +33,7 @@ export const Place = sequelize.define(
     { timestamps: false } // true면 createdAt, updatedAt 컬럼이 자동으로 생김
 );
 // user_idx user_name user_id user_pw user_email user_phone user_area
-
+await sequelize.sync();
 export async function getAll() {
     return Place.findAll();
 }

@@ -12,7 +12,7 @@ function sendit() {
         user_email
     };
 
-    fetch('http://localhost:8080/auth/signup', {
+    fetch('https://port-0-udiroserver-7e6o2cli3ac97a.sel4.cloudtype.app/auth/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
